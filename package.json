@@ -1,0 +1,27 @@
+{
+  "name": "adopt-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format-code": "prettier \"src/**/*.{js,html}\" --write",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amylokh/adopt-me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amylokh/adopt-me/issues"
+  },
+  "homepage": "https://github.com/amylokh/adopt-me#readme",
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "prettier": "^2.2.1"
+  }
+}
