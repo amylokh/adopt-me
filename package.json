@@ -7,7 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format-code": "prettier \"src/**/*.{js,html}\" --write",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "dev": "parcel src/index.html"
+    "start": "parcel src/index.html"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
   },
   "repository": {
     "type": "git",
