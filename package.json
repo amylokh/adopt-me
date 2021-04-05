@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format-code": "prettier \"src/**/*.{js,html}\" --write",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html",
+    "mock-start": "cross-env PET_MOCK=mock npm run start"
   },
   "engines": {
     "node": ">=10.0.0",
@@ -26,6 +27,7 @@
   "homepage": "https://github.com/amylokh/adopt-me#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.3",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
@@ -37,7 +39,11 @@
   },
   "dependencies": {
     "@frontendmasters/pet": "^1.0.3",
+    "@reach/router": "^1.3.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  }
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
 }
