@@ -1,6 +1,7 @@
 import React from "react";
 import pet from "@frontendmasters/pet";
 import Carousel from "./Carousel";
+import ErrorBoundary from "./ErrorBoundary";
 
 class Details extends React.Component {
   //the super(props) line is imperative & it must be written every time
@@ -62,4 +63,10 @@ class Details extends React.Component {
   }
 }
 
-export default Details;
+export default function DetailsWithErrorBoundary(props) {
+  return (
+    <ErrorBoundary>
+      <Details {...props} />
+    </ErrorBoundary>
+  );
+}

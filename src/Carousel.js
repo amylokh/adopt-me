@@ -29,7 +29,7 @@ class Carousel extends React.Component {
   // if you still want to use function, then you will have to write a constructor as on line no.5 & then bind this
   handleIndexClick = (event) => {
     this.setState({
-      active: +event.target.dataset.index,
+      active: +event.target.dataset.index, //converts index string to an integer
     });
   };
 
