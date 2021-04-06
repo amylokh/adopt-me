@@ -1,18 +1,21 @@
 import React from "react";
 import pet from "@frontendmasters/pet";
+import Carousel from "./Carousel";
 
 class Details extends React.Component {
   //the super(props) line is imperative & it must be written every time
   //you write a constructor & want to initialise the props
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    // these properties are only accessible inside this particular component/class & nowhere else in the application
-    // you can tweak the properties of this state to whatever you want inside this class which we are doing on line 24
-    this.state = {
-      loading: true,
-    };
-  }
+  //   // these properties are only accessible inside this particular component/class & nowhere else in the application
+  //   // you can tweak the properties of this state to whatever you want inside this class which we are doing on line 24
+  //   this.state = {
+  //     loading: true,
+  //   };
+  // }
+
+  state = { loading: true };
 
   //component did mount is generally used to make AJAX requests
   componentDidMount() {
@@ -43,10 +46,11 @@ class Details extends React.Component {
     if (this.state.loading) {
       return <h1>Loading ...</h1>;
     }
-    const { animal, name, breed, description, location } = this.state;
+    const { animal, name, breed, description, location, media } = this.state;
 
     return (
       <div className="details">
+        <Carousel media={media} />
         <div>
           <h1>{name}</h1>
           <h2>{`${animal} - ${breed} - ${location}`}</h2>
